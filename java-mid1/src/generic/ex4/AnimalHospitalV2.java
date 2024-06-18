@@ -15,6 +15,7 @@ public class AnimalHospitalV2 <T extends Animal>{
     }
 
     public T bigger(T target) {
+        System.out.println("Test");
         return animal.getSize() > target.getSize() ? animal : target;
     }
 }
