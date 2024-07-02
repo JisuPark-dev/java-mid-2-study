@@ -1,0 +1,16 @@
+package mid1.oop1;
+
+public class ValueDataMain {
+    public static void main(String[] args) {
+        ValueData valueData = new ValueData();
+        add(valueData);
+        add(valueData);
+        add(valueData);
+
+    }
+
+    static void add(ValueData valueData) {
+        valueData.value++;
+        System.out.println("valueData = " + valueData);
+    }
+}
