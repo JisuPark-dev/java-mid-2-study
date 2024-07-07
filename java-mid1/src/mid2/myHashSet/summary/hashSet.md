@@ -64,3 +64,16 @@ private int hashIndex(Object value) {
     }
 ```
 3) remove에서 `boolean result = bucket.remove(value);` value가 Object 객체이므로 그냥 넘겨도 된다.
+
+## Equals, hashCode의 중요성
+hi와 jpa는 hashIndex가 같다. 만약 hi로 저장하고 jpa로 검색한 경우, equals()로 확인해야지만 정확한 판단이 가능하다.
+
+hashCode를 설정해주지 않으면, 해쉬값이 다르기 때문에 내가 의도하기로는 같은 값도 다른 값으로 인식된다.
+즉 다른 위치에 같은 값이 중복으로 들어가진다. -> 검색도 제대로 먹지 않는다.
+equals를 구현해주지 않으면, hashCode로 같은 위치에 들어와도 참조값이 다르기 때문에 다른 값으로 인식된다.
+
+해쉬 자료구조르 쓸 때는 둘다 구현해야 정상적으로 작동한다.
+
+## 제네릭과 인터페이스 도입
+
+
